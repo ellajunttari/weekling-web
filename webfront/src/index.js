@@ -100,6 +100,8 @@ const App = () => {
             for (let j = 0; j < maara; j++) {
                 let checkCont = document.createElement("div")
                 checkCont.className = "checkcontainer";
+                checkCont.id = 'checkCont' + i + j;
+                checkCont.style.backgroundColor = '#292929';
                 paiva.appendChild(checkCont);
 
                 let check = document.createElement('input');
@@ -108,7 +110,20 @@ const App = () => {
                 var x = `${i}, ${j}`
                 check.id = x //paiva.id // kertoo mikä päivä on (idn)
                 check.type = 'checkbox';
+                check.addEventListener('change', checkColor, false)
+            
             }
+        }
+    }
+    
+    function checkColor(event) {
+        var box = event.target;
+        var cont = box.parentNode;
+        if (box.checked) {
+            cont.style.backgroundColor = ' #c3a41e';
+        }
+        else {
+            cont.style.backgroundColor = '#292929';
         }
     }
 
