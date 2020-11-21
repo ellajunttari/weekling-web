@@ -120,7 +120,15 @@ const App = () => {
                 <script src="pohja.js"> </script>
             </head>
             <body id="vartalo">
-                <h1 id="otsikko">Weekling-bot</h1>
+                <div id="headerContainer">
+                    <a href="/"><img src="weekling_logo_1.png" alt="logo" /></a>
+                    <!--HREF TO WEBSITE ADDRESS-->
+                </div>
+
+                <div id="instructions">
+                    <p id="instructions-text">Please select available times and press Send</p>
+                </div>
+        
                 <div id="kalenteri">
                     <aside class="sivu">
                         <ul class="left">
